@@ -1,0 +1,31 @@
+h1,p,input{
+    font-family: 'Raleway', sans-serif;
+
+}
+
+#speechContainer{
+    margin: 20px;
+}
+#submitBtn{
+    background-color: rgb(238, 98, 4);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+ 
+}
+
+#submitBtn:hover{
+    cursor:pointer;
+    background-color: rgb(233, 169, 126);
+    color: rgb(102, 98, 98);
+}
+
+#transcriptContainer{
+    margin-top: 20px;
+}
+#speechTxt{
+    font-size: 18px;
+    width: 50%;
+}

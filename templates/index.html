@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Speech_Recognition_Pyton</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/index.css') }}"/>
+
+</head>
+<body>
+    <div id="speechContainer">
+        <h1>Upload a file to transcribe</h1>
+        <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file"/> 
+        <br>
+        <input type="submit" id="submitBtn" value="Get text from audio!"/>
+        <a href="{{url_for('liveSpeech')}}">Try live speech recognition</a>
+        </form>
+
+  {% if transcript != "" %}
+    <div id="transcriptContainer">
+        <h1>Here is your transcribed text:</h1>
+        <p id="speechTxt">{{transcript}}</p>
+    </div>
+    {% endif %}
+
+    {% if isLive == True %}
+    <h2>Start talking, I am listening ...</h2>
+    {%endif%}
+
+    </div>
+
+</body>
+
+</html>
